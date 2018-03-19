@@ -1,7 +1,7 @@
-RPM_NAME=oracle-jdk8-qhr
-RPM_JDK_UPDATE=161
-RPM_VERSION="1.8.0_${RPM_JDK_UPDATE}"
-RPM_RELEASE=4
+RPM_NAME=oracle-jdk9-qhr
+RPM_JDK_UPDATE=4
+RPM_VERSION="9.0.${RPM_JDK_UPDATE}"
+RPM_RELEASE=1
 RPM_ARCH=x86_64
 
 # End of Configurable Settings
@@ -11,13 +11,13 @@ RPM_FILE_PREFIX=${RPM_NAME}-${RPM_VERSION}-${RPM_RELEASE}
 SRPM_FILE=${RPM_FILE_PREFIX}.src.rpm
 RPM_FILE=${RPM_FILE_PREFIX}.${RPM_ARCH}.rpm
 
-SPEC_FILE=jdk8.spec
+SPEC_FILE=jdk.spec
 
 BUILD_DEFINES=--define "name ${RPM_NAME}" --define "version ${RPM_VERSION}" --define "release ${RPM_RELEASE}" --define "jdk_update ${RPM_JDK_UPDATE}"
 
 
 MOCKOUTPUTFILES=build.log hw_info.log installed_pkgs.log root.log state.log
-SOURCES=sources/jdk-8u${RPM_JDK_UPDATE}-linux-x64.tar.gz
+SOURCES=sources/jdk-9.0.${RPM_JDK_UPDATE}_linux-x64_bin.tar.gz
 
 default: ${RPM_FILE}
 
@@ -43,5 +43,5 @@ sources-update-checksum:
 	sha512sum $(SOURCES) > sources-sha512sums
 	
 
-sources/jdk-8u${RPM_JDK_UPDATE}-linux-x64.tar.gz:
-	wget -O "$@" --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u${RPM_JDK_UPDATE}-b12/2f38c3b165be4555a1fa6e98c45e0808/jdk-8u${RPM_JDK_UPDATE}-linux-x64.tar.gz
+sources/jdk-9.0.${RPM_JDK_UPDATE}_linux-x64_bin.tar.gz:
+	wget -O "$@" --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/9.0.4+11/c2514751926b4512b076cc82f959763f/jdk-9.0.4_linux-x64_bin.tar.gz
