@@ -1,7 +1,7 @@
 Summary: Oracle JDK 9
 
-%define prefix /opt/jdk9
-%global priority 9900000%{jdk_update}
+%define prefix /opt/jdk10
+%global priority 91000000%{jdk_update}
 
 Name: %{name}
 Version: %{version}
@@ -10,20 +10,20 @@ BuildArch: x86_64
 Group: Development/Tools
 License: http://java.com/license
 URL: http://www.oracle.com/technetwork/java/index.html
-Source1: jdk-9.0.%{jdk_update}_linux-x64_bin.tar.gz
+Source1: jdk-10_linux-x64_bin.tar.gz
 AutoReqProv: no
-Provides:   java-sdk-1.9.0 = 1:%{version}
-Provides:   java-sdk = 1:1.9.0
-Provides:   java-1.9.0-devel = 1:%{version}
-Provides:   java-devel = 1:1.9.0
-Provides:   jre-1.9.0 = 1:%{version}
-Provides:   java-1.9.0 = 1:%{version}
-Provides:   jre = 1:1.9.0
-Provides:   java = 1:1.9.0
-Provides:   java-1.9.0-headless = 1:%{version}
-Provides:   java-headless = 1:1.9.0
-Provides:   jre-1.9.0-headless = 1:%{version}
-Provides:   jre-headless = 1:1.9.0
+Provides:   java-sdk-1.10.0 = 1:%{version}
+Provides:   java-sdk = 1:1.10.0
+Provides:   java-1.10.0-devel = 1:%{version}
+Provides:   java-devel = 1:1.10.0
+Provides:   jre-1.10.0 = 1:%{version}
+Provides:   java-1.10.0 = 1:%{version}
+Provides:   jre = 1:1.10.0
+Provides:   java = 1:1.10.0
+Provides:   java-1.10.0-headless = 1:%{version}
+Provides:   java-headless = 1:1.10.0
+Provides:   jre-1.10.0-headless = 1:%{version}
+Provides:   jre-headless = 1:1.10.0
 Provides:   libjvm.so()(64bit)
 %global debug_package %{nil}
 %define __jar_repack %{nil}

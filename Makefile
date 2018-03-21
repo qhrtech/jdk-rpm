@@ -1,6 +1,6 @@
-RPM_NAME=oracle-jdk9-qhr
-RPM_JDK_UPDATE=4
-RPM_VERSION="9.0.${RPM_JDK_UPDATE}"
+RPM_NAME=oracle-jdk10-qhr
+RPM_JDK_UPDATE=0
+RPM_VERSION="10.0.${RPM_JDK_UPDATE}"
 RPM_RELEASE=1
 RPM_ARCH=x86_64
 
@@ -17,7 +17,7 @@ BUILD_DEFINES=--define "name ${RPM_NAME}" --define "version ${RPM_VERSION}" --de
 
 
 MOCKOUTPUTFILES=build.log hw_info.log installed_pkgs.log root.log state.log
-SOURCES=sources/jdk-9.0.${RPM_JDK_UPDATE}_linux-x64_bin.tar.gz
+SOURCES=sources/jdk-10_linux-x64_bin.tar.gz
 
 default: ${RPM_FILE}
 
@@ -43,5 +43,5 @@ sources-update-checksum:
 	sha512sum $(SOURCES) > sources-sha512sums
 	
 
-sources/jdk-9.0.${RPM_JDK_UPDATE}_linux-x64_bin.tar.gz:
-	wget -O "$@" --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/9.0.4+11/c2514751926b4512b076cc82f959763f/jdk-9.0.4_linux-x64_bin.tar.gz
+sources/jdk-10_linux-x64_bin.tar.gz:
+	wget -O "$@" --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/10+46/76eac37278c24557a3c4199677f19b62/jdk-10_linux-x64_bin.tar.gz
