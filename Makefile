@@ -44,4 +44,4 @@ sources-update-checksum:
 	
 
 sources/jdk-8u${RPM_JDK_UPDATE}-linux-x64.tar.gz:
-	wget -O "$@" --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u${RPM_JDK_UPDATE}-b12/2f38c3b165be4555a1fa6e98c45e0808/jdk-8u${RPM_JDK_UPDATE}-linux-x64.tar.gz
+	wget --progress=dot:mega -O "$@" --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u${RPM_JDK_UPDATE}-b12/2f38c3b165be4555a1fa6e98c45e0808/jdk-8u${RPM_JDK_UPDATE}-linux-x64.tar.gz
