@@ -10,7 +10,7 @@ BuildArch: x86_64
 Group: Development/Tools
 License: http://java.com/license
 URL: http://www.oracle.com/technetwork/java/index.html
-Source1: jdk-10_linux-x64_bin.tar.gz
+Source1: jdk-%{version}_linux-x64_bin.tar.gz
 AutoReqProv: no
 Provides:   java-sdk-1.10.0 = 1:%{version}
 Provides:   java-sdk = 1:1.10.0
