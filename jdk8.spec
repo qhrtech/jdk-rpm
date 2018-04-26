@@ -1,5 +1,4 @@
 Summary: Oracle JDK 8
-%define jdk_update 161
 
 %define prefix /opt/jdk8
 %global priority 91800%{jdk_update}
