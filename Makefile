@@ -1,7 +1,7 @@
 RPM_NAME=oracle-jdk8-qhr
-RPM_JDK_UPDATE=191
+RPM_JDK_UPDATE=202
 RPM_VERSION="1.8.0_${RPM_JDK_UPDATE}"
-RPM_RELEASE=4
+RPM_RELEASE=1
 RPM_ARCH=x86_64
 
 # End of Configurable Settings
@@ -42,4 +42,4 @@ sources-update-checksum:
 	sha512sum $(SOURCES) > sources-sha512sums
 
 sources/jdk-8u${RPM_JDK_UPDATE}-linux-x64.tar.gz:
-	wget --progress=dot:mega -O "$@" --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u${RPM_JDK_UPDATE}-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u${RPM_JDK_UPDATE}-linux-x64.tar.gz
+	wget --progress=dot:mega -O "$@" --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u${RPM_JDK_UPDATE}-b08/1961070e4c9b4e26a04e7f5a083f551e/jdk-8u${RPM_JDK_UPDATE}-linux-x64.tar.gz
